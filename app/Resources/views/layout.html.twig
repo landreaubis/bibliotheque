@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="header">
+            <div id="banner">
+                {% block banner %}{% endblock %}
+            </div>
+            <div id="customer_area">
+                {% block customer_area %}{% endblock %}
+            </div>
+        </div>
+        <div id="container">
+            <div id="left_column">
+                {% block left_column %}{% endblock %}
+            </div>
+            <div id="content">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+        <div id="footer">
+            {% block footer %}{% endblock %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('app.css', 'css') }}">
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('app.js', 'js') }}"></script>
+{% endblock %}

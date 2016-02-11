@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+}
+#wrapper {
+    width: 960px;
+    margin: 0 auto;
+}
+#header, #container, #footer {
+    width: 100%;
+    margin:0 auto;
+    background-color:#000000;
+    color: #FFFFFF;
+}
+#header {
+    height: 100px;
+    margin-bottom: 10px;
+}
+#container {
+    min-height: 400px;
+    margin-bottom: 10px;
+}
+#footer {
+    height: 50px;
+}
+#banner, #customer_area {
+    float: left;
+}
+#banner {
+    width: 60%;
+}
+#left_column, #content {
+    float: left;
+}
+#left_column {
+    width: 20%;
+}
+#banner, left_column{
+    margin-right: 10px;
+}
