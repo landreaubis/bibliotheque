@@ -31,7 +31,14 @@ framework:
         save_path:   "%kernel.root_dir%/../var/sessions/%kernel.environment%"
     fragments:       ~
     http_method_override: true
-    assets: ~
+    assets: 
+        packages:
+            img:
+                base_path: /assets/images/
+            js:
+                base_path: /assets/js/
+            css:
+                base_path: /assets/css/
 
 # Twig Configuration
 twig:
@@ -67,3 +74,4 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+    
