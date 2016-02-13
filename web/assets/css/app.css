@@ -5,14 +5,13 @@ body {
     width: 960px;
     margin: 0 auto;
 }
-#header, #container, #footer {
+#header, #container, #footer, #top_bar {
     width: 100%;
     margin:0 auto;
     background-color:#000000;
     color: #FFFFFF;
 }
 #header {
-    height: 100px;
     margin-bottom: 10px;
 }
 #container {
@@ -22,11 +21,7 @@ body {
 #footer {
     height: 50px;
 }
-#banner, #customer_area {
-    float: left;
-}
-#banner {
-    width: 60%;
+#customer_area {
 }
 #left_column, #content {
     float: left;

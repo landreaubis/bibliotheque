@@ -2,13 +2,13 @@
 
 {% block body %}
     <div id="wrapper">
-        <div id="header">
-            <div id="banner">
-                {% block banner %}{% endblock %}
-            </div>
+        <div id="top_bar">
             <div id="customer_area">
-                {% block customer_area %}{% endblock %}
+                {{ render(controller('FOSUserBundle:Security:login'))}}
             </div>
+        </div>
+        <div id="header">
+            Header une belle image
         </div>
         <div id="container">
             <div id="left_column">
