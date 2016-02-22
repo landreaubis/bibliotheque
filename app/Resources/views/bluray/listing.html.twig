@@ -5,7 +5,9 @@
     <div class='listingBluray'>
         {% for key, value in listBluray %}
             <div>
-                <div class="pictureListing">{{value.picture}}</div>
+                <div class="pictureListing">
+                    <img src="{{ asset(value.picture, 'imgBluray') | imagine_filter('blurayListing') }}" />
+                </div>
                 <div class="descriptionListing">
                     <h2>{{value.title}}</h2>
                     {{value.description}}
