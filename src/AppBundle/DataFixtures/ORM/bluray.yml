@@ -1,19 +1,8 @@
 AppBundle\Entity\Bluray:
-    ironman:
-        title: Iron Man
-        description: Texte en attente Texte en attente Texte en attente Texte en attente Texte en attente Texte en attente Texte en attente Texte en attente Texte en attente 
-        type: action
-        trailer: EcZIzpvRTlU
-        available: 1
-    ironman2:
-        title: Iron Man 2
-        description: Texte en attente Texte en attente Texte en attente Texte en attente Texte en attente Texte en attente Texte en attente Texte en attente Texte en attente 
-        type: action
+    ironman{1..10}:
+        title: <name()>
+        description: <text()>
+        type: <word()>
         trailer: Z6Z1f4Lt01o
         available: 1
-    ironman3:
-        title: Iron Man 3
-        description: Texte en attente Texte en attente Texte en attente Texte en attente Texte en attente Texte en attente Texte en attente Texte en attente Texte en attente 
-        type: action
-        trailer: SEDUJD0ZLIw
-        available: 1
+        picture: <picture()>
