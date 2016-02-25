@@ -1,0 +1,15 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>{{bluray.title}}</h1>
+    <div class="detailPicture">
+        {{bluray.picture}}
+        <h2>Description</h2>
+        <p><label>Type : </label>{{bluray.type}}</p>
+        {{bluray.description}}
+    </div>
+    <div class="detailTrailer">
+        <h2>Trailer</h2>
+        {{bluray.trailer}}
+    </div>
+{% endblock %}

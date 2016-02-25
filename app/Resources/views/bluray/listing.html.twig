@@ -1,0 +1,18 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Blu-ray</h1>
+    <div class='listingBluray'>
+        {% for key, value in listBluray %}
+            <div>
+                <div class="pictureListing">
+                    <img src="{{ asset(value.picture, 'imgBluray') | imagine_filter('blurayListing') }}" />
+                </div>
+                <div class="descriptionListing">
+                    <h2>{{value.title}}</h2>
+                    {{value.description}}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
