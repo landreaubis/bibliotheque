@@ -65,7 +65,7 @@ class Bluray
     {
         return $this->id;
     }
-    
+
     /**
      * @param string $title
      *
@@ -74,10 +74,10 @@ class Bluray
     public function setTitle($title)
     {
         $this->title = $title;
-    
+
         return $this;
     }
-    
+
     /**
      * @return string
      */
@@ -85,7 +85,7 @@ class Bluray
     {
         return $this->title;
     }
-    
+
     /**
      * @param string $description
      *
@@ -94,10 +94,10 @@ class Bluray
     public function setDescription($description)
     {
         $this->description = $description;
-    
+
         return $this;
     }
-    
+
     /**
      * @return string
      */
@@ -105,7 +105,7 @@ class Bluray
     {
         return $this->description;
     }
-    
+
     /**
      * @param string $picture
      *
@@ -114,10 +114,10 @@ class Bluray
     public function setPicture($picture)
     {
         $this->picture = $picture;
-    
+
         return $this;
     }
-    
+
     /**
      * @return string
      */
@@ -125,7 +125,7 @@ class Bluray
     {
         return $this->picture;
     }
-    
+
     /**
      * @param string $trailer
      *
@@ -134,10 +134,10 @@ class Bluray
     public function setTrailer($trailer)
     {
         $this->trailer = $trailer;
-    
+
         return $this;
     }
-    
+
     /**
      * @return string
      */
@@ -145,7 +145,7 @@ class Bluray
     {
         return $this->trailer;
     }
-    
+
     /**
      * @param string $available
      *
@@ -154,10 +154,10 @@ class Bluray
     public function setAvailable($available)
     {
         $this->available = $available;
-    
+
         return $this;
     }
-    
+
     /**
      * @return string
      */
@@ -165,7 +165,7 @@ class Bluray
     {
         return $this->available;
     }
-    
+
     /**
      * @param string $type
      *
@@ -174,10 +174,10 @@ class Bluray
     public function setType($type)
     {
         $this->type = $type;
-    
+
         return $this;
     }
-    
+
     /**
      * @return string
      */
