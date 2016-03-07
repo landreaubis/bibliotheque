@@ -3,7 +3,7 @@
 {% block content %}
     <h1>{{bluray.title}}</h1>
     <div class="detailPicture">
-        {{bluray.picture}}
+        <img src="{{ asset(bluray.picture, 'imgBluray') | imagine_filter('blurayDetail') }}" />
         <h2>Description</h2>
         <p><label>Type : </label>{{bluray.type}}</p>
         {{bluray.description}}
