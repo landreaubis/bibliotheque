@@ -32,3 +32,22 @@ body {
 #banner, left_column{
     margin-right: 10px;
 }
+
+.pagination {
+    text-align:center;
+}
+
+.pagination span a{
+    background-color:#ffffff;
+    padding:3px 7px;
+    color:#000000;
+    margin: 5px 0;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.pagination span.current{
+    background-color:#ffffff;
+    padding:3px 7px;
+    color:#000000;
+}

@@ -13,7 +13,7 @@ class BlurayController extends Controller
      */
     public function listingAction($page = 1, $maxperpage = 4)
     {
-        $query = $this->getDoctrine()->getRepository('AppBundle:Bluray')->findAll($page, $maxperpage);
+        $query = $this->getDoctrine()->getRepository('AppBundle:Bluray')->findAll();
 
         // Création de la pagination
         $paginator = $this->get('knp_paginator');
