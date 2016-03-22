@@ -8,10 +8,10 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 class BlurayController extends Controller
 {
     /**
-     * @Route("/Bluray/listing/{page}/{maxperpage}")
+     * @Route("/Bluray/listing/{page}")
      * @Template("bluray\listing.html.twig")
      */
-    public function listingAction($page = 1, $maxperpage = 4)
+    public function listingAction($page = 1)
     {
         $query = $this->getDoctrine()->getRepository('AppBundle:Bluray')->findAll();
 
@@ -20,7 +20,7 @@ class BlurayController extends Controller
         $pagination = $paginator->paginate(
             $query,
             $page,
-            $maxperpage
+            $this->getParameter('bluray_per_page')
         );
 
         return ['pagination' => $pagination];
