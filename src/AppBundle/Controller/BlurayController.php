@@ -4,18 +4,26 @@ namespace AppBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
-use Doctrine\ORM\Tools\Pagination\Paginator;
 
 class BlurayController extends Controller
 {
     /**
-     * @Route("/Bluray/listing/{page}/{maxperpage}")
+     * @Route("/Bluray/listing/{page}")
      * @Template("bluray\listing.html.twig")
      */
-    public function listingAction($page = 1, $maxperpage = 4)
+    public function listingAction($page = 1)
     {
-        $listBluray = $this->getDoctrine()->getRepository('AppBundle:Bluray')->findAll();
-        return ['listBluray' => $listBluray];
+        $query = $this->getDoctrine()->getRepository('AppBundle:Bluray')->findAll();
+
+        // Création de la pagination
+        $paginator = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $query,
+            $page,
+            $this->getParameter('bluray_per_page')
+        );
+
+        return ['pagination' => $pagination];
     }
 
     /**

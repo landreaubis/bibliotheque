@@ -18,3 +18,5 @@ parameters:
     # A secret key that's used to generate certain security-related tokens
     secret:            ABetterSecuredPersonnalTokenByBeru
     locale: en
+    # Parameter for number of bluray per page in listing
+    bluray_per_page: 4
