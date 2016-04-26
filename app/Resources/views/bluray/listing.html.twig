@@ -3,16 +3,22 @@
 {% block content %}
     <h1>Blu-ray</h1>
     <div class='listingBluray'>
-        {% for key, value in listBluray %}
+        <div class="pagination">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+        {% for article in pagination %}
             <div>
                 <div class="pictureListing">
-                    <img src="{{ asset(value.picture, 'imgBluray') | imagine_filter('blurayListing') }}" />
+                    <img src="{{ asset(article.picture, 'imgBluray') | imagine_filter('blurayListing') }}" />
                 </div>
                 <div class="descriptionListing">
-                    <h2>{{value.title}}</h2>
-                    {{value.description}}
+                    <h2>{{article.title}}</h2>
+                    {{article.description}}
                 </div>
             </div>
         {% endfor %}
+        <div class="pagination">
+            {{ knp_pagination_render(pagination) }}
+        </div>
     </div>
 {% endblock %}
