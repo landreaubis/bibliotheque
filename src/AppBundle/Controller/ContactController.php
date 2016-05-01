@@ -20,31 +20,29 @@ class ContactController extends Controller
         $form = $this->createForm(ContactType::class);
 
         $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()) {
+        if ($form->isValid()) {
                 $message = \Swift_Message::newInstance()
-                ->setSubject('Contact')
+                ->setSubject($this->get('translator')->trans('subjectContactForm', array(), 'contact'))
                 ->setFrom($form->get('email')->getData())
-                ->setTo('benjamin.dumortier@gmail.com')
+                ->setTo($this->container->getParameter('mail_contact'))
                 ->setBody(
                     $this->renderView(
                         ':mail:contact.html.twig',
-                        array(
+                        [
                             'email' => $form->get('email')->getData(),
                             'name' => $form->get('name')->getData(),
-                            'message' => $form->get('message')->getData()
-                        )
+                            'message' => $form->get('message')->getData(),
+                        ]
                     )
                 );
 
                 $this->get('mailer')->send($message);
 
-                $request->getSession()->getFlashBag()->add('success', $this->get('translator')->trans('successSendMail', array(), 'contact'));
+                $request->getSession()->getFlashBag()->add('success', 'successSendMail');
 
-                return $this->redirect($this->generateUrl('contact'));
+                return $this->redirect('/contact');
         }
 
-        return array(
-                'form' => $form->createView()
-        );
+        return ['form' => $form->createView()];
     }
 }

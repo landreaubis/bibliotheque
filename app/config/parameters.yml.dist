@@ -20,3 +20,5 @@ parameters:
     locale: en
     # Parameter for number of bluray per page in listing
     bluray_per_page: 4
+    # Parameter for mail contact to receive
+    mail_contact:       ~

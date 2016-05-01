@@ -20,9 +20,7 @@ class ContactType extends AbstractType
 
     public function configureOptions(OptionsResolver $resolver)
     {
-        $resolver->setDefaults(array(
-            'translation_domain' => 'contact'
-        ));
+        $resolver->setDefaults(['translation_domain' => 'contact']);
     }
 
     public function getName()
