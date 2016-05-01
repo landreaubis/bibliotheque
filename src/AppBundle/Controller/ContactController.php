@@ -20,6 +20,7 @@ class ContactController extends Controller
         $form = $this->createForm(ContactType::class);
 
         $form->handleRequest($request);
+
         if ($form->isValid()) {
                 $message = \Swift_Message::newInstance()
                 ->setSubject($this->get('translator')->trans('subjectContactForm', array(), 'contact'))
