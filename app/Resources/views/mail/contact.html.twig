@@ -1,0 +1,7 @@
+New message from {{ name }}
+
+E-mail: {{email}}
+
+{% autoescape %}
+{{ message|raw }}
+{% endautoescape %}

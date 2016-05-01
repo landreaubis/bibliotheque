@@ -1,0 +1,6 @@
+name: 'Votre nom'
+email: 'Votre adresse mail'
+message: 'Message'
+successSendMail: 'Votre message a bien été envoyé'
+Submit: 'Envoyer'
+subjectContactForm: 'Contact de votre site'
