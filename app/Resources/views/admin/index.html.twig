@@ -1,0 +1,17 @@
+{% extends 'layout.html.twig' %}
+
+{% trans_default_domain 'AppBundleAdmin' %}
+
+{% block content %}
+
+    <h1>Admin</h1>
+
+    <div class="row">
+
+        <div id="users" class="col-md-6">
+            <a href="admin/bluray">{{ 'index.list_of_bluray'|trans() }}</a>
+        </div>
+
+    </div>
+
+{% endblock %}
